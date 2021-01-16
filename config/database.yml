@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: kakomo_app_production
+  database: <%= ENV['KAKOMO_APP_DATABASE'] %>
   username: <%= ENV['KAKOMO_APP_DATABASE_USERNAME'] %>
   password: <%= ENV['KAKOMO_APP_DATABASE_PASSWORD'] %>
