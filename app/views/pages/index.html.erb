@@ -7,11 +7,19 @@
           <% else %>
             <%= link_to '個人新規登録', new_user_registration_path %>
             <%= link_to '個人ログイン', new_user_session_path %>
+          <% end %>
+
+          <% if company_signed_in? %>
+            <strong><%= link_to current_company.email, pages_show_path %></strong>
+            <%= link_to '企業プロフィール変更', edit_company_registration_path %>
+            <%= link_to 'ログアウト', destroy_company_session_path, method: :delete %>
+          <% else %>
             <%= link_to '企業新規登録', new_company_registration_path %>
             <%= link_to '企業ログイン', new_company_session_path %>
           <% end %>
       </nav>
 </header>
+
 
 <h1>ようこそ</h1>
 <p>トップページです。</p>
