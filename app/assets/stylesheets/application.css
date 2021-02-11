@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+ body {
+  margin: auto;
+  width: auto;
+  min-width: auto;
+ }
+
+ footer {
+  width: 100vw;
+  height: 5vh;
+  padding: 5vh 0;
+  color: #FFF;
+  background-color: #204969;
+  text-align: center;
+}
+
+.devise-error-messages-title{
+  font-size: 15px;
+  color: red;
+}
+
+.devise-error-messages {
+  font-size: 10px;
+  text-align: center;
+  list-style: none;
+  color: red;
+}
+

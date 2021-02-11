@@ -1,0 +1,173 @@
+.top-page-header {
+  width: auto;
+  padding: 2vh 5vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #f2f4f6;
+}
+
+.kakomo-icon {
+  width: 10vw;
+  margin-right: 10vw;
+}
+
+.left-header {
+  text-align: right;
+}
+
+.right-header {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  padding:3vh 0;
+  font-family:  serif,'arial black';
+}
+
+/* 画面上部の「おいしいを、囲もう」帯部分 */
+main {
+  background-color: #f2f4f6;
+  width: 100vw;
+}
+
+.title-contents {
+  width: auto;
+  height: 90vh;
+  /*background-image: url("http://gahag.net/img/201509/24s/gahag-0007183976-1.jpg");*/
+  background-image: url("../images/kakomo-top01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);  
+}
+
+.service-title {
+  font-size: 8vh;
+  font-family:  serif,'arial black';
+}
+
+.service-explain {
+  font-size: 3vh;
+  line-height: 40px;
+  font-family:  serif,'arial black';
+}
+/* //画面上部の「おいしいを、囲もう」帯部分 */
+
+/* 「Kakomoが届けたいこと」部分 */
+.selling-point-contents {
+  padding: 5vh 5vw;
+  font-family:  serif,'arial black';
+}
+
+.selling-point-contents>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.selling-point-contents>.title::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: #294969;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.point-lists {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.point-lists>.list {
+  width: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.list-pict {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
+.point-list-text {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.point-list-blue-text {
+  
+}
+
+.point-list-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
+/* //「Kakomoが届けたいこと」部分 */
+
+/* Kakomoが届くまで */
+.how-to-contents {
+  padding: 5vh 15vw;
+}
+
+.how-to-contents>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+  font-family:  serif,'arial black';
+}
+
+.how-to-contents>.title::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: #204969;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.how-to-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.how-to-lists>.list {
+  width: 32vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-to-list-text {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 50px;
+  font-family:  serif,'arial black';
+}
+
+.how-to-list-description {
+  font-size: 18px;
+  margin-top: 10px;
+  font-family:  serif,'arial black';
+}
+
+/* //Kakomoが届くまで */
