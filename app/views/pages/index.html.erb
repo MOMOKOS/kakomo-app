@@ -1,25 +1,167 @@
-<header>
-      <nav>
-          <% if user_signed_in? %>
-            <strong><%= link_to current_user.nickname, pages_show_path %></strong>
-            <%= link_to 'プロフィール変更', edit_user_registration_path %>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to '個人新規登録', new_user_registration_path %>
-            <%= link_to '個人ログイン', new_user_session_path %>
-          <% end %>
-
-          <% if company_signed_in? %>
-            <strong><%= link_to current_company.email, pages_show_path %></strong>
-            <%= link_to '企業プロフィール変更', edit_company_registration_path %>
-            <%= link_to 'ログアウト', destroy_company_session_path, method: :delete %>
-          <% else %>
-            <%= link_to '企業新規登録', new_company_registration_path %>
-            <%= link_to '企業ログイン', new_company_session_path %>
-          <% end %>
-      </nav>
+<header class='top-page-header'>
+      <div class ="left-header">
+       <%= link_to image_tag("kakomo-logo01.jpg", class:"kakomo-icon"), "/" %>
+      </div>
+      <div class="right-header">
+        <% if user_signed_in? %>
+          <strong><%= link_to current_user.nickname, pages_show_path %></strong>
+          <%= link_to 'プロフィール変更', edit_user_registration_path %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to '個人新規登録', new_user_registration_path %>
+          <%= link_to '個人ログイン', new_user_session_path %>
+        <% end %>
+        <% if company_signed_in? %>
+          <strong><%= link_to current_company.email, pages_show_path %></strong>
+          <%= link_to '企業プロフィール変更', edit_company_registration_path %>
+          <%= link_to 'ログアウト', destroy_company_session_path, method: :delete %>
+        <% else %>
+          <%= link_to '企業新規登録', new_company_registration_path %>
+          <%= link_to '企業ログイン', new_company_session_path %>
+        <% end %>
+      </div>
 </header>
 
+<main>
+  <%# 画面上部の「おいしいを、囲もう」帯部分 %>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      「おいしい」を、囲もう。
+    </h2>
+    <p class='service-explain'>
+      離れた場所にいても、同じおつまみを食べよう。
+    </p>
+    <p class='service-explain'>
+      kakomoは、オンライン飲み会のためのコミュニケーションフード宅配サービスです。
+    </p>
+  </div>
+  <%# /画面上部の「おいしいを、囲もう」帯部分  %>
+  
+  <%# 「Kakomoが届けたいこと」部分 %>
+  <div class='selling-point-contents'>
+    <h2 class='title'>
+      Kakomoが届けたいこと
+    </h2>
+    <ul class='point-lists'>
+      <li class='list'>
+        <%= image_tag "kakomo-snaq03.jpg", class:"list-pict" %>
+        <h3 class='point-list-text'>
+          <span class='point-list-blue-text'>「おいしい」共通体験</span>
+        </h3>
+        <p class='point-list-description'>
+          離れた場所にいても、同じおつまみを囲めば従来の飲み会のような一体感が生まれます。
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "kakomo-snaq01.jpg", class:"list-pict" %>
+        <h3 class='point-list-text'>
+          <span class='point-list-blue-text'>おつまみ診断</span>
+        </h3>
+        <p class='point-list-description'>
+          お好きな料理や飲み会のムードを答えるだけ。ぴったりなおつまみを提案します。
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "kakomo-snaq07.jpg", class:"list-pict" %>
+        <h3 class='point-list-text'>
+          <span class='point-list-blue-text'>好きな場所にお届け</span>
+        </h3>
+        <p class='point-list-description'>
+          ご自宅やお仕事場のポストにおつまみセットをお届け。
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "kakomo-snaq04.jpg", class:"list-pict" %>
+        <h3 class='point-list-text'>
+          <span class='point-list-blue-text'>お好みにアレンジ</span>
+        </h3>
+        <p class='point-list-description'>
+          アレルギー成分などご指定ください。一部の方のみ抜くことも可能です。
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /「Kakomoが届けたいこと」 %>
+  <%# 「Kakomoで商品が届くまで」 %>
+  <div class='how-to-contents'>
+    <h2 class='title'>
+      Kakomoで商品が届くまで
+    </h2>
+    <ul class='how-to-lists'>
+      <li class='list'>
+        <%= image_tag "kakomo-howto01.png", class:"list-pict" %>
+        <h3 class='how-to-list-text'>
+          おつまみ診断
+        </h3>
+        <p class='how-to-list-description'>
+          食の好みや除外したい食材などの情報をご入力ください。ご購入手続きは診断の後にございます。
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "kakomo-howto02.jpg", class:"list-pict" %>
+        <h3 class='how-to-list-text'>
+          ポストにお届け
+        </h3>
+        <p class='how-to-list-description'>
+          ご自宅やお仕事場のポストに商品をお届け。置き配などのご指定も承ります。
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "kakomo-howto03.jpg", class:"list-pict" %>
+        <h3 class='how-to-list-text'>
+          飲み会スタート
+        </h3>
+        <p class='how-to-list-description'>
+          おつまみを開いて、おうちのお酒で乾杯！（お酒はセットに含まれません）
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /「Kakomoで商品が届くまで」 %>
+  <%# 下部広告部分 %>
+  <div class='ad-footer-contents'>
+    <p class='ad-footer-explain'>
+     Kakomoで「おいしい」の共通体験を。
+    </p>
+    <p class='ad-footer-explain'>
+     Kakomoはおつまみに特化した宅配サービスです。
+    </p>
+    <p class='ad-footer-explain'>
+     今夜は画面の向こうのあの人と、一緒につまみましょう。
+    </p>
+  </div>
+<%# /下部広告部分 %>
+</main>
 
-<h1>ようこそ</h1>
-<p>トップページです。</p>
+<div class='footer'>
+  <div class='footer-contents'>
+    <div class='kakomo-details'>
+      <h2 class='footer-content-head'>Kakomoについて</h2>
+      <ul>
+        <li><%= link_to '会社概要（運営会社)', "#", class: "footer-link" %></li>
+        <li><%= link_to 'プライバシーポリシー', "#", class: "footer-link" %></li>
+        <li><%= link_to 'Kakomo利用規約', "#", class: "footer-link" %></li>
+        <li><%= link_to 'ポイントに関する特約', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+    <div class='kakomo-details'>
+      <h2 class='footer-content-head'>Kakomoを見る</h2>
+      <ul>
+        <li><%= link_to 'カテゴリー一覧', "#", class: "footer-link" %></li>
+        <li><%= link_to '出店一覧', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+    <div class='kakomo-details'>
+      <h2 class='footer-content-head'>Kakomoについて</h2>
+      <ul>
+        <li><%= link_to 'Kakomoガイド', "#", class: "footer-link" %></li>
+        <li><%= link_to 'ロゴ利用ガイドライン', "#", class: "footer-link" %></li>
+        <li><%= link_to 'お知らせ', "#", class: "footer-link" %></li>
+      </ul>
+    </div>
+  </div>
+  <%= link_to image_tag("kakomo-logo02.jpg", class:"logo-white"), "#" %>
+</div>
+
+
+
