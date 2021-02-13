@@ -51,6 +51,9 @@ ActiveRecord::Schema.define(version: 2021_01_31_061238) do
     t.datetime "locked_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+
+    t.string "username"
+
   end
 
 end
