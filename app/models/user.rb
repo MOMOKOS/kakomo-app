@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          #:confirmable, 
          :lockable, :timeoutable, :trackable
+  
+  with_options presence: true do
+    validates :nickname
+  end
+
 end
