@@ -14,13 +14,19 @@
  *= require_self
  */
 
+ nav {
+   text-align: right;
+ }
 
-
+ header {
+   width: 100vw;
+   min-width: 100vw;
+ }
 
  body {
-  margin: auto;
-  width: auto;
-  min-width: auto;
+   margin: auto;
+   width: 100vw;
+   min-width: 100vw;
  }
 
  footer {
@@ -42,5 +48,3 @@
   text-align: center;
   list-style: none;
   color: red;
-}
-
